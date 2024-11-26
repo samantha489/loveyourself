@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Yourself</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        textarea {
+            width: 80%;
+            max-width: 600px;
+            height: 150px;
+            padding: 15px;
+            font-size: 1em;
+            border: 2px solid #ff9a9e;
+            border-radius: 10px;
+            resize: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #fad0c4;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #ff9a9e;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #fad0c4;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>Love Yourself</h1>
+    <p>Escribe tus pensamientos o lo que sientas. Este es un espacio seguro.</p>
+    <textarea placeholder="Escribe aquí lo que tienes en mente..."></textarea>
+    <br>
+    <button onclick="enviarMensaje()">Enviar</button>
+    <footer>&copy; 2024 Love Yourself. Todo estará bien 💖</footer>
+
+    <script>
+        function enviarMensaje() {
+            const mensaje = document.querySelector('textarea').value;
+            if (mensaje.trim() === "") {
+                alert("Por favor, escribe algo antes de enviar.");
+            } else {
+                alert("Gracias por compartir tus pensamientos. Este es un lugar seguro para ti. ❤️");
+                document.querySelector('textarea').value = ""; // Limpia el cuadro de texto
+            }
+        }
+    </script>
+</body>
+</html>
